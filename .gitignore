@@ -1,0 +1,5 @@
+../.venv
+../backend/telegram/admin/admin_list.py
+../.env
+../backend/src/telegram/add_genre.py
+../backend/src/telegram/add_product.py
