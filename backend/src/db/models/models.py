@@ -88,6 +88,26 @@ class Products(Base):
         finally:
             session.close()
 
+    @staticmethod
+    def get_wav(genre_name: str):
+        genre = session.query(Genres).filter_by(name=genre_name).first()
+
+        files = session.query(Products).filter(Products.genre_id==genre.id).all()
+        return files if files else None
+
+    @staticmethod
+    def get_descriptions(genre_name: str):
+        from sqlalchemy import select, join
+
+        stmt = (
+            select(Products.description)
+            .select_from(join(Products, Genres, Products.genre_id == Genres.id))
+            .where(Genres.name == genre_name)
+        )
+        results = session.execute(stmt).all()
+        descriptions = [result[0] for result in results]
+        return descriptions
+
 
 class Orders(Base):
     __tablename__ = "orders"
