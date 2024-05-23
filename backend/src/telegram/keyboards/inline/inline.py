@@ -35,7 +35,7 @@ def social_links() -> InlineKeyboardMarkup:
     sell_link = ('https://www.beatstars.com/Kartigo?_gl=1*3ulm43*_ga*NzE3MjMxODE3LjE3MTU4Mzc1MDM.'
                  '*_ga_EFBBTCG2XY*MTcxNTgzNzUwMy4xLjEuMTcxNTgzNzg4Ni40Ni4wLjA')
 
-    official_site_btn = InlineKeyboardButton(text='Официальный сайт', url=WebAppInfo(url=official_site))
+    official_site_btn = InlineKeyboardButton(text='Официальный сайт', web_app=WebAppInfo(url=official_site))
     tg_channel_btn = InlineKeyboardButton(text='Телеграм канал', url=tg_channel)
     instagram_btn = InlineKeyboardButton(text='Instagram автора', url=instagram)
     sell_link_btn = InlineKeyboardButton(text='Приобрести композиции', web_app=WebAppInfo(url=sell_link))
