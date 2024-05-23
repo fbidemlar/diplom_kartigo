@@ -1,5 +1,5 @@
 from aiogram.types import Message
-from diplom_kartigo.backend.src.telegram.keyboards.users.inline.inline import social_links
+from diplom_kartigo.backend.src.telegram.keyboards.inline.inline import social_links
 
 async def social(message: Message):
     try:

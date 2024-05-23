@@ -4,7 +4,7 @@ import os
 
 from diplom_kartigo.backend.src.telegram.bot import bot
 from diplom_kartigo.backend.src.db.models.models import Users, Products
-from diplom_kartigo.backend.src.telegram.keyboards.users.inline.inline import get_genres, to_signup, link_sell
+from diplom_kartigo.backend.src.telegram.keyboards.inline.inline import get_genres, to_signup, link_sell
 from diplom_kartigo.config import settings
 
 

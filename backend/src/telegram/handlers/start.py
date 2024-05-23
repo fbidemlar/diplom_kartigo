@@ -1,6 +1,6 @@
 from aiogram.types import Message
 from diplom_kartigo.backend.src.db.models.models import Users
-from diplom_kartigo.backend.src.telegram.keyboards.users.inline.inline import to_signup
+from diplom_kartigo.backend.src.telegram.keyboards.inline.inline import to_signup
 
 async def start(message: Message):
     try:
